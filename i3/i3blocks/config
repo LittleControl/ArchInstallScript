@@ -1,0 +1,50 @@
+# Global properties
+separator=true
+separator_block_width=15
+
+#[documentation]
+#full_text=Documentation
+#website=https://vivien.github.io/i3blocks
+#command=xdg-open "$website"
+#color=#f12711
+
+[screenshot]
+full_text=📷
+command=flameshot gui
+
+#[greetings]
+#color=#f5af19
+#command=echo "Hello, $USER!"
+#interval=once
+
+[cpu_usage2]
+command=~/.config/scripts/cpu_usage
+markup=pango
+interval=persist
+min_width=🤕 00.00%
+#REFRESH_TIME=1
+LABEL=🤕
+#WARN_PERCENT=50
+#CRIT_PERCENT=80
+#DECIMALS=2
+
+[memory]
+command=~/.config/scripts/memory
+label=😏 
+interval=30
+#[memory]
+#command=$SCRIPT_DIR/memory
+#label=SWAP
+#instance=swap
+#interval=30
+
+[battery]
+command=~/.config/scripts/battery
+interval=30
+#LABEL=BAT
+LABEL=🍼
+#BAT_NUMBER=0
+
+[time]
+command=date '+%Y-%m-%d %H:%M:%S'
+interval=1

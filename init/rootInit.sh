@@ -4,7 +4,7 @@ timedatectl set-ntp true
 hwclock -w
 pacman -S reflector btrfs-progs terminus-font
 setfont ter-124b zsh grml-zsh-config
-cp ../vim/.vimrc ~/
+cp misc/.vimrc ~/
 # Shell的一些基本操作不是很会,只能暂时用这种基本笨的办法了
 echo "" >> /etc/xdg/reflector/reflector.conf
 echo "--save /etc/pacman.d/mirrorlist" >> /etc/xdg/reflector/reflector.conf
