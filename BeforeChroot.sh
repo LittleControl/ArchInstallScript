@@ -9,6 +9,6 @@ echo "--country China" >> /etc/xdg/reflector/reflector.conf
 echo "--latest 5" >> /etc/xdg/reflector/reflector.conf
 echo "--sort rate" >> /etc/xdg/reflector/reflector.conf
 systemctl start reflector.service
-pacstrap /mnt base linux linux-firmware linux-headers vim iwd man-db man-pages texinfo base-devel grub efibootmgr os-prober ntfs-3g bash-completion zsh zsh-completions git
+pacstrap /mnt base linux linux-firmware linux-headers vim iwd man-db man-pages texinfo base-devel grub efibootmgr os-prober ntfs-3g bash-completion zsh zsh-completions git intel-ucode
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
