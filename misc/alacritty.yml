@@ -16,47 +16,76 @@ scrolling:
 
 font:
   normal:
-    family: Dejavu Sans Mono
-    style: Book
+    family: Roboto Mono
+    style: Regular
   bold:
-    family: Dejavu Sans Mono
+    family: Roboto Mono
     style: Bold
   italic:
-    family: Dejavu Sans Mono
-    style: Oblique
+    family: Roboto Mono
+    style: Italic
   bold_italic:
-    family: Dejavu Sans Mono
-    style: Bold Oblique
-  size: 11.0
+    family: Roboto Mono
+    style: Bold Italic
+  size: 14.0
 
 draw_bold_text_with_bright_colors: true
 
-# Colors (Pencil Dark)
+# Colors (One Dark)
 colors:
-  # Default Colors
+  # Default colors
   primary:
-    background: '#212121'
-    foreground: '#f1f1f1'
+    background: "0x1e2127"
+    foreground: "0xabb2bf"
+
   # Normal colors
   normal:
-    black:   '#212121'
-    red:     '#c30771'
-    green:   '#10a778'
-    yellow:  '#a89c14'
-    blue:    '#008ec4'
-    magenta: '#523c79'
-    cyan:    '#20a5ba'
-    white:   '#e0e0e0'
+    black: "0x1e2127"
+    red: "0xe06c75"
+    green: "0x98c379"
+    yellow: "0xd19a66"
+    blue: "0x61afef"
+    magenta: "0xc678dd"
+    cyan: "0x56b6c2"
+    white: "0xabb2bf"
+
   # Bright colors
   bright:
-    black:   '#212121'
-    red:     '#fb007a'
-    green:   '#5fd7af'
-    yellow:  '#f3e430'
-    blue:    '#20bbfc'
-    magenta: '#6855de'
-    cyan:    '#4fb8cc'
-    white:   '#f1f1f1'
+    black: "0x5c6370"
+    red: "0xe06c75"
+    green: "0x98c379"
+    yellow: "0xd19a66"
+    blue: "0x61afef"
+    magenta: "0xc678dd"
+    cyan: "0x56b6c2"
+    white: "0xffffff"
+# # Colors (Pencil Dark)
+# colors:
+#   # Default Colors
+#   primary:
+#     background: "#212121"
+#     foreground: "#f1f1f1"
+#   # Normal colors
+#   normal:
+#     black: "#212121"
+#     red: "#c30771"
+#     green: "#10a778"
+#     yellow: "#a89c14"
+#     blue: "#008ec4"
+#     magenta: "#523c79"
+#     cyan: "#20a5ba"
+#     white: "#e0e0e0"
+#   # Bright colors
+#   bright:
+#     black: "#212121"
+#     red: "#fb007a"
+#     green: "#5fd7af"
+#     yellow: "#f3e430"
+#     blue: "#20bbfc"
+#     magenta: "#6855de"
+#     cyan: "#4fb8cc"
+#     white: "#f1f1f1"
+
 live_config_reload: true
 background_opacity: 0.8
 
@@ -65,7 +94,7 @@ selection:
 
 cursor:
   style:
-    shape: Beam
+    shape: block
   blinking: true
 
 mouse:
@@ -78,5 +107,5 @@ mouse_bindings:
   - { mouse: Right, action: PasteSelection }
 
 key_bindings:
-  - { key: C, mods: Control|Shift,  action: Copy}
-  - { key: V, mods: Control|Shift,  action: Paste}
+  - { key: C, mods: Control|Shift, action: Copy }
+  - { key: V, mods: Control|Shift, action: Paste }

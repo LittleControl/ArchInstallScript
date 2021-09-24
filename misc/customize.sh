@@ -1,5 +1,7 @@
 #!/bin/sh
 
+FILE_DIR=`dirname $0`
+
 # Grub Theme
 mkdir -p ~/Downloads && cd ~Downloads
 git clone https://github.com/vinceliuice/grub2-themes.git
@@ -19,3 +21,17 @@ yay -S firefox nodejs npm yarn visual-studio-code-bin lsof nss
 
 # sound driver
 yay -S alsa-utils pulseaudio pulseaudio-alsa  pipewire pipewire-docs pipewire-alsa pipewire-pulse helvum 
+
+# vim config
+
+mkdir -p ~/.vim/{colors,autoload}
+cd FILE_DIR 
+cp ./vim/.vimrc ~/
+cp -r ./vim/colors/* ~/.vim/colors/
+cp -r ./vim/autoload/* ~/.vim/autoload/
+
+# alacritty config
+
+mkdir -p ~/.config/alacritty
+cd FILE_DIR
+cp ./alacritty.yml ~/.config/alacritty/
