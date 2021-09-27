@@ -3,7 +3,7 @@
 FILE_DIR=`dirname $0`
 
 # Grub Theme
-mkdir -p ~/Downloads && cd ~Downloads
+mkdir -p ~/Downloads && cd ~/Downloads
 git clone https://github.com/vinceliuice/grub2-themes.git
 cd grub2-themes
 sudo chmod +x ./install.sh
@@ -14,7 +14,7 @@ pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji
 
 # Basic Software
 
-yay -S firefox nodejs npm yarn visual-studio-code-bin lsof nss
+yay -S firefox nodejs npm yarn visual-studio-code-bin lsof nss alacritty mvi mpv
 
 # oh-my-zsh
 # sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
