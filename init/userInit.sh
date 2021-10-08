@@ -1,10 +1,10 @@
 #!/bin/sh
 
-git config --global user.name 'littlecontrol'
-git config --global user.email 'i@littlecontrol.me'
-git config --global user.autocrlf input
+# sudo git config --global user.name 'littlecontrol'
+# sudo git config --global user.email 'i@littlecontrol.me'
+# sudo git config --global user.autocrlf input
 cp /etc/zsh/zshrc ~/.zshrc
 mkdir ~/Downloads && cd ~/Downloads
-pacman -S go
+sudo pacman -S go
 git clone https://aur.archlinux.org/yay.git
 cd yay && makepkg -si
