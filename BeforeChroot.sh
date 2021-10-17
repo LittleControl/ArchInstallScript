@@ -12,7 +12,7 @@ echo "--sort rate" >> /etc/xdg/reflector/reflector.conf
 echo "Selecting the fastest mirror, please wait..."
 systemctl start reflector.service
 echo "Mirror selection completed..."
-pacstrap /mnt base linux linux-firmware linux-headers vim iwd man-db man-pages texinfo base-devel grub efibootmgr os-prober ntfs-3g bash-completion zsh grml-zsh-config git intel-ucode
+pacstrap /mnt base linux linux-firmware linux-headers vim iwd man-db man-pages texinfo base-devel grub efibootmgr bash-completion zsh grml-zsh-config git amd-ucode
 genfstab -U /mnt >> /mnt/etc/fstab
 cd FILE_DIR
 cp ./ArchInstallScript /mnt/root/
