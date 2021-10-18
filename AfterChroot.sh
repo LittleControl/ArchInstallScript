@@ -18,7 +18,19 @@ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 grub-mkconfig -o /boot/grub/grub.cfg
 # Systemd-boot
 # bootctl install
-echo "please set your root password"
+# echo "default  arch.conf" > /boot/loader/loader.conf
+# echo "console-mode  max" >> /boot/loader/loader.conf
+# echo "please set your root password"
+# echo "title   Arch Linux" > /boot/loader/entries/arch.conf
+# echo "linux   /vmlinuz-linux" >> /boot/loader/entries/arch.conf
+# echo "initrd    /amd-ucode.img" >> /boot/loader/entries/arch.conf
+# echo "initrd    /initramfs-linux.img" >> /boot/loader/entries/arch.conf
+# echo "options   root=\"LABEL=arch_os\"  rw" >> /boot/loader/entries/arch.conf
+# echo "title   Arch Linux (fallback initramfs)" > /boot/loader/entries/arch-fallback.conf
+# echo "linux   /vmlinuz-linux" >> /boot/loader/entries/arch-fallback.conf
+# echo "initrd    /amd-ucode.img" >> /boot/loader/entries/arch-fallback.conf
+# echo "initrd    /initramfs-linux-fallback.img" >> /boot/loader/entries/arch-fallback.conf
+# echo "options   root=\"LABEL=arch_os\"  rw" >> /boot/loader/entries/arch-fallback.conf
 passwd root
 echo "basic setting finished, now back to archiso"
 echo "run umount -R /mnt to umount /mnt"
