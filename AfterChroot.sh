@@ -4,12 +4,12 @@ ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 hwclock --systohc
 sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
-echo "Inspiron" > /etc/hostname
-echo "127.0.0.1     Inspiron" >> /etc/hosts
-echo "::1           Inspiron" >> /etc/hosts
-echo "127.0.1.1     Inspiron.localdomain  Inspiron" >> /etc/hosts
+echo "Avalon" > /etc/hostname
+echo "127.0.0.1     Avalon" >> /etc/hosts
+echo "::1           Avalon" >> /etc/hosts
+echo "127.0.1.1     Avalon.localdomain  Avalon" >> /etc/hosts
 sed -i 's/#COMPRESSION="zstd"/COMPRESSION="zstd/g"' /etc/mkinitcpio.conf
-mkinitcpio -P linux
+mkinitcpio -p linux
 # GRUB
 sed -i '8a\GRUB_DISABLE_OS_PROBER=false' /etc/default/grub
 sed -i '/^GRUB_DEFAULT/c\GRUB_DEFAULT=saved' /etc/default/grub
@@ -25,12 +25,12 @@ grub-mkconfig -o /boot/grub/grub.cfg
 # echo "linux   /vmlinuz-linux" >> /boot/loader/entries/arch.conf
 # echo "initrd    /amd-ucode.img" >> /boot/loader/entries/arch.conf
 # echo "initrd    /initramfs-linux.img" >> /boot/loader/entries/arch.conf
-# echo "options   root=\"LABEL=arch_os\"  rw" >> /boot/loader/entries/arch.conf
+# echo "options   root=\"LABEL=rootfs\"  rw rootflags=subvol=@" >> /boot/loader/entries/arch.conf
 # echo "title   Arch Linux (fallback initramfs)" > /boot/loader/entries/arch-fallback.conf
 # echo "linux   /vmlinuz-linux" >> /boot/loader/entries/arch-fallback.conf
 # echo "initrd    /amd-ucode.img" >> /boot/loader/entries/arch-fallback.conf
 # echo "initrd    /initramfs-linux-fallback.img" >> /boot/loader/entries/arch-fallback.conf
-# echo "options   root=\"LABEL=arch_os\"  rw" >> /boot/loader/entries/arch-fallback.conf
+# echo "options   root=\"LABEL=rootfs\"  rw rootflags=subvol=@" >> /boot/loader/entries/arch-fallback.conf
 passwd root
 echo "basic setting finished, now back to archiso"
 echo "run umount -R /mnt to umount /mnt"
