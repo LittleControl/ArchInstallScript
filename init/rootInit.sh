@@ -1,7 +1,10 @@
 #!/bin/sh
+systemctl enable --now systemd-networkd.service
+systemctl enable --now systemd-resolved.service
+systemctl enable --now iwd.service
 timedatectl set-ntp true
 hwclock -w
-pacman -S reflector btrfs-progs terminus-font git
+pacman -S reflector terminus-font
 setfont ter-124b
 git config --system user.name 'littlecontrol'
 git config --system user.email 'i@littlecontrol.me'
